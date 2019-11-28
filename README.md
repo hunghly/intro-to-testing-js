@@ -12,7 +12,7 @@ Additionally, we will be using a process called Test Driven Development, commonl
     <dt>Implementation</dt>
     <dd>The code the a developer authors to realize the sequence of steps that the code runs to solve a problem (called an algorithm).</dd>    
     <dt>Refactor</dt>
-    <dd>To refactor means to re-write an implementation. [Refactoring](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) aims to increase the code quality without changing its observable behavior. Developers refactor code to increase readability, increase flexibility, add a fix for edge-case bugs, reduce duplication, or make the code more accessible for yourself and other developers moving forward.</dd>    
+    <dd>To refactor means to re-write an implementation. [Refactoring](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) aims to increase the code quality without changing its observable behavior. Developers refactor code to increase readability, increase flexibility, add a fix for edge-case bugs, reduce duplication, or make the code more accessible for yourself and other developers moving forward.</dd>  
     <dt>Unit</dt>
     <dd>An individual piece of functionality which is single, whole, and complete but which also forms an individual component of a larger or more complex whole.</dd>
     <dt>Unit Test</dt>
@@ -74,18 +74,25 @@ Additionally, we will be using a process called Test Driven Development, commonl
 1. Clone this repo to your projects folder following the "Getting Started" directions. Take a moment to orient yourself with the test runner, the existing tests, and the implementation inside of `code.js`.
 
 1. Once you're setup and comfortable, go to `code.js` and change the name of the `helloWorld` function to `hello`. Then refresh `report.html` in your browser.
-    - What do you notice about the test results?
+    - What do you notice about the test results? 
+        There were many errors and issues.
     - What are some ways you think we could get the tests to turn green again?
+        Change the tests.js helloWorld functions to hello functions.
     - Set the function name in `code.js` back to `helloWorld` and re-run the tests.
-    
+        
 1. Inside of the `helloWorld` function in `code.js`, replace `return "Hello, World!"` with `return "Hello"`.
     - Run the tests by refreshing `report.html` in your browser.
+        Done.
     - Which tests fail? Which tests are still green?
+        expect(helloWorld()).toBe("Hello, World!"); failed due to return of "Hello".
     - Set the implementation back to `return "Hello, World!"`
+        
 
 1. Inside of the `helloWorld` function in `code.js`, change the line `return "Hello, World!"` to `console.log("Hello, World!")`. Then refresh `report.html`.
     - What happens to the tests? Identify which tests stay green and which ones turn red. 
+        The first, third, and fourth tests failed. The second test passed.
     - Why do you think that is?
+        
     - Consider, what is the return value of a `console.log`? *hint*, it's always the same
     - Consider, what is the return value of a `return`?
     - Fix your `helloWorld` implementation so that it greens all the tests.
