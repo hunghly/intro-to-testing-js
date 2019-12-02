@@ -39,4 +39,18 @@ const isEven = function(number) {
     return (typeof number === 'boolean') ? false : ((number % 2) === 0);
 };
 
-
+const isVowel = function (ch) {
+    if ((ch === undefined) || (typeof ch === 'number') || (typeof ch === 'boolean') || (ch.length > 1)) {
+        return false
+    }
+    switch (ch.toLowerCase()) {
+        case "a" :
+        case "e" :
+        case "i" :
+        case "o" :
+        case "u" :
+            return true;
+        default :
+            return false;
+    }
+};
