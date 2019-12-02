@@ -45,7 +45,21 @@ describe ("sayHello", function() {
         expect(sayHello(null)).toBe(undefined);
     });
     it('should return undefined when a number type is passed in 14', function(){
-        expect(sayHello(typeof number)).toBe(undefined);
+        expect(sayHello(Number)).toBe(undefined);
+    });
+});
+describe("isFive", function() {
+    it('should be a type of function if isFive exists', function () {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should always return a boolean', function () {
+       expect(typeof isFive()).toBe('boolean');
+    });
+    it('should return true if 5 is passed', function () {
+        expect(isFive(5)).toBe(true);
+    });
+    it('should return true if 5 as a string is passed', function () {
+        expect(isFive("5")).toBe(true);
     });
 });
 
