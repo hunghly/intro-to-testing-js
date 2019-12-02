@@ -75,9 +75,9 @@ Additionally, we will be using a process called Test Driven Development, commonl
 
 1. Once you're setup and comfortable, go to `code.js` and change the name of the `helloWorld` function to `hello`. Then refresh `report.html` in your browser.
     - What do you notice about the test results? 
-        There were many errors and issues.
+        All four tests failed.
     - What are some ways you think we could get the tests to turn green again?
-        Change the tests.js helloWorld functions to hello functions.
+        Change the tests.js helloWorld functions to hello functions or change the 'hello' function back to 'helloWorld'.
     - Set the function name in `code.js` back to `helloWorld` and re-run the tests.
         
 1. Inside of the `helloWorld` function in `code.js`, replace `return "Hello, World!"` with `return "Hello"`.
@@ -90,16 +90,21 @@ Additionally, we will be using a process called Test Driven Development, commonl
 
 1. Inside of the `helloWorld` function in `code.js`, change the line `return "Hello, World!"` to `console.log("Hello, World!")`. Then refresh `report.html`.
     - What happens to the tests? Identify which tests stay green and which ones turn red. 
-        The first, third, and fourth tests failed. The second test passed.
+        The second, third, and fourth tests failed. The first test passed.
     - Why do you think that is?
-        
+         expect(typeof helloWorld).toBe('function'); failed due to return of undefined.
+         expect(helloWorld()).toBe("Hello, World!"); failed due to return of a console log, instead of returning a string.
+         expect(helloWorld()).not.toBe(undefined); failed due to return of undefined.
     - Consider, what is the return value of a `console.log`? *hint*, it's always the same
+         console.log returns a typeof undefined, but prints a string.
     - Consider, what is the return value of a `return`?
+         the return value is the type of whatever is being returned.
     - Fix your `helloWorld` implementation so that it greens all the tests.
 
 1. Now, let's purposefully put a syntax error into the `helloWorld` function, to see what happens with the tests. 
     - Open up `code.js` and remove the closing curly brace from the end of the `helloWorld` function definition.
     - Refresh `report.html` in your browser.
+         all tests failed due to the syntax error.
     - Fix the syntax error and confirm that tests are all green.
 
 1. Now, go to `code.js` and replace the function statement for `helloWorld` with a function experession. Do all the tests stay green or not? Why or why not? Double check your syntax. These are interchangeable because functions are *first class* citizens in the JS language.
