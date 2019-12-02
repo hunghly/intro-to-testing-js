@@ -2,11 +2,16 @@
 const helloWorld = function () {
     return "Hello, World!";
 };
-const sayHello = function(name) {
+const sayHello = function(name='World') {
     // const errMsg = "Name is not a string. Should return a string when called.";
     // console.assert((typeof name === 'string'), errMsg);
     // return `Hello, ${name}!`;
-    return (typeof name === 'string') ? `Hello, ${name}!` : console.assert((typeof name === 'string'), "Name is not a string. Should return a string when called.");
+    // if (name === true) {
+    //     console.log(name + "this is true");
+    // }
+
+    return (typeof name === 'boolean') ? "Hello, World!" : (typeof name === 'string') ? `Hello, ${name}!` :
+        console.assert((typeof name === 'string'), "Name is not a string. Should return a string when called.");
 };
 
 console.assert((sayHello("Jane") === "Hello, Jane!"), "Didn't return 'Hello, Jane!'");
@@ -16,4 +21,9 @@ console.log(sayHello("Jane"));
 console.log(sayHello("Alex"));
 console.log(sayHello("Pat"));
 console.log(sayHello(1));
-
+console.log(sayHello());
+console.log(sayHello(true));
+console.log(sayHello(false));
+console.log(sayHello(null));
+console.log(sayHello(""));
+console.log(sayHello(2.3));

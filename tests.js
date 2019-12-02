@@ -29,8 +29,23 @@ describe ("sayHello", function() {
     it('should return the string "Hello, Alex!" when Alex is passed in 9', function(){
         expect(sayHello("Alex")).toBe("Hello, Alex!");
     });
-    it('should return the string "Hello, Pat!" when Pat is passed in 9', function(){
+    it('should return the string "Hello, Pat!" when Pat is passed in 10', function(){
         expect(sayHello("Pat")).toBe("Hello, Pat!");
+    });
+    it('should return the string "Hello, World!" when nothing is passed in 11', function(){
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when true is passed in 12', function(){
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when false is passed in 12', function(){
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it('should return undefined when "null" is passed in 13', function(){
+        expect(sayHello(null)).toBe(undefined);
+    });
+    it('should return undefined when a number type is passed in 14', function(){
+        expect(sayHello(typeof number)).toBe(undefined);
     });
 });
 
