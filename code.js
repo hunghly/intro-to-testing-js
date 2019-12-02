@@ -34,3 +34,9 @@ sayHello(2.3);*/
 const isFive = function(number) {
     return Number(number) === 5;
 };
+
+const isEven = function(number) {
+    return (typeof number === 'boolean') ? false : ((number % 2) === 0);
+};
+
+
