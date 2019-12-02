@@ -54,3 +54,9 @@ const isVowel = function (ch) {
             return false;
     }
 };
+const add = function(num1, num2) {
+    if (isNaN(num1) || isNaN(num2)) {
+        return Number.NaN;
+    }
+    return Number(num1) + Number(num2);
+};
