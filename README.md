@@ -196,6 +196,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Can you get the implmentation of `sayHello` down to a function with only one line of code inside?
     Yes. return (typeof name === 'string') ? `Hello, ${name}!` : console.assert((typeof name === 'string'), "Name is not a string. Should return a string when called.");
 - If we have `return "Hello, " + input + "!";`, does this work for all names?
+    Yes as long as the parameter 'input' matches the variables used for the function.
 - Does this bring up any other issues with other inputs?
 
 ### Exercise #7 Add, commit, and push your work to GitHub.
