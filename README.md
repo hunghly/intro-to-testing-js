@@ -192,7 +192,9 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 
 ### Exercise #6 Implement the refactor!
 - Inside `sayHello` in `code.js`, what's a change you can identify that will improve the overall functioning of this function?
+    Use template literal, pass in a parameter for name, and use ternary operator for conditionals.
 - Can you get the implmentation of `sayHello` down to a function with only one line of code inside?
+    Yes. return (typeof name === 'string') ? `Hello, ${name}!` : console.assert((typeof name === 'string'), "Name is not a string. Should return a string when called.");
 - If we have `return "Hello, " + input + "!";`, does this work for all names?
 - Does this bring up any other issues with other inputs?
 
