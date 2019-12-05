@@ -1,4 +1,6 @@
-// helloWorld function 
+const test = true;
+
+// helloWorld function
 const helloWorld = function () {
     return "Hello, World!";
 };
